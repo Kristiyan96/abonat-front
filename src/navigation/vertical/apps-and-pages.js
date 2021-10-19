@@ -5,16 +5,21 @@ export default [
   {
     title: 'Shop Profile',
     route: 'apps-email',
-    icon: 'MailIcon',
+    icon: 'HomeIcon',
   },
   {
     title: 'Subscriptions',
     route: 'apps-chat',
-    icon: 'MessageSquareIcon',
+    icon: 'CreditCardIcon',
   },
   {
-    title: 'Invoice',
+    title: 'Clients',
+    route: 'apps-chat',
+    icon: 'UsersIcon',
+  },
+  {
+    title: 'Invoices',
     icon: 'FileTextIcon',
     route: 'apps-invoice-list',
-  },
+  },  
 ]
