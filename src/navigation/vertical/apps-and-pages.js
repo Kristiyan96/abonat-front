@@ -1,5 +1,10 @@
 export default [
   {
+    title: 'Dashboard',
+    route: 'apps-email',
+    icon: 'ActivityIcon',
+  },
+  {
     header: 'General',
   },
   {
