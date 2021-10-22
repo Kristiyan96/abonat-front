@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Dashboard',
-    route: 'apps-email',
+    route: 'dashboard-ecommerce',
     icon: 'ActivityIcon',
   },
   {
@@ -9,17 +9,17 @@ export default [
   },
   {
     title: 'Shop Profile',
-    route: 'apps-email',
+    route: { name: 'apps-users-view', params: { id: 21 } },
     icon: 'HomeIcon',
   },
   {
     title: 'Subscriptions',
-    route: 'apps-chat',
+    route: 'apps-todo',
     icon: 'CreditCardIcon',
   },
   {
     title: 'Clients',
-    route: 'apps-chat',
+    route: 'apps-users-list',
     icon: 'UsersIcon',
   },
   {

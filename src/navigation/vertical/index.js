@@ -30,8 +30,8 @@ tag
 tagVariant
 
 */
-import appsAndPages from './apps-and-pages'
+import vendor from './vendor'
 import common from './common'
 
 // Array of sections
-export default [...appsAndPages, ...common]
+export default [...vendor, ...common]
