@@ -319,4 +319,21 @@ export default [
       ],
     },
   },
+  {
+    path: '/pages/support',
+    name: 'pages-support',
+    component: () => import('@/views/pages/support/Support.vue'),
+    meta: {
+      pageTitle: 'Support',
+      breadcrumb: [
+        {
+          text: 'Pages',
+        },
+        {
+          text: 'Support',
+          active: true,
+        },
+      ],
+    },
+  },
 ]

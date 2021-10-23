@@ -31,12 +31,9 @@ const LayoutFull = () => import('@/layouts/full/LayoutFull.vue')
 
 export default {
   components: {
-
-    // Layouts
     LayoutHorizontal,
     LayoutVertical,
     LayoutFull,
-
     ScrollToTop,
   },
   // ! We can move this computed: layout & contentLayoutType once we get to use Vue 3
