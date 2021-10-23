@@ -4,8 +4,10 @@
 
 ### Uses:
 - Vuexy template - [demo](https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/)
-- VueRouter - [documentation](https://router.vuejs.org/installation.html#direct-download-cdn)
+- VueRouter for routing - [documentation](https://router.vuejs.org/installation.html#direct-download-cdn)
 - Feather Icons - [list](https://vue-feather-icons.egoist.sh/)
+- Vuex for global state - [documentation](https://vuex.vuejs.org/)
+
 
 ### Prerequisites
 
