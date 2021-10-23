@@ -1,8 +1,9 @@
 <template>
   <div>
-    <!-- faq search section -->
+    <!-- faq search section: not needed for now -->
     <section id="faq-search-filter">
       <b-card
+        v-if="false"
         no-body
         class="faq-search"
         :style="{backgroundImage:`url(${require('@/assets/images/banner/banner.png')})`}"
