@@ -30,8 +30,9 @@ tag
 tagVariant
 
 */
-import vendor from './vendor'
+import vendor from './venue'
 import common from './common'
+import client from './client'
 
 // Array of sections
 export default [...vendor, ...common]

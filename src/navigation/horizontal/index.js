@@ -23,8 +23,9 @@ title
 route: [route_obj/route_name] (I have to resolve name somehow from the route obj)
 
 */
-import vendor from './vendor'
+import vendor from './venue'
 import common from './common'
+import client from './client'
 
 // Array of sections
-export default [...vendor, ...common]
+export default [...vendor, ...common, ...client]

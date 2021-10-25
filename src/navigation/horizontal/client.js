@@ -1,14 +1,9 @@
 export default [
   {
-    title: "Dashboard",
-    route: "dashboard-ecommerce",
-    icon: "ActivityIcon",
-  },
-  {
     header: "General",
   },
   {
-    title: "Shop Profile",
+    title: "Profile",
     route: { name: "apps-users-view", params: { id: 21 } },
     icon: "HomeIcon",
   },
@@ -18,9 +13,7 @@ export default [
     icon: "CreditCardIcon",
   },
   {
-    title: "Clients",
-    route: "apps-users-list",
-    icon: "UsersIcon",
+    header: "Accounting",
   },
   {
     title: "Invoices",

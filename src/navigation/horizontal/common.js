@@ -12,9 +12,9 @@ export default [
     route: "pages-faq",
     icon: "InfoIcon",
   },
-  {
-    title: "Blog",
-    route: "pages-blog-list",
-    icon: "FileTextIcon",
-  },
+  // {
+  //   title: "Blog",
+  //   route: "pages-blog-list",
+  //   icon: "FileTextIcon",
+  // },
 ];
