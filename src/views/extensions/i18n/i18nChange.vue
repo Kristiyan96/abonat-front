@@ -18,17 +18,9 @@
           English
         </b-form-radio>
         <b-form-radio
-          value="fr"
+          value="bg"
         >
-          French
-        </b-form-radio>
-        <b-form-radio
-          value="de"
-        >
-          German
-        </b-form-radio>
-        <b-form-radio value="pt">
-          Portuguese
+          Bulgarian
         </b-form-radio>
       </b-form-radio-group>
     </b-form-group>
