@@ -1,6 +1,6 @@
-# Abonat
+# Bulkit
 
-#### This is the front-end of Abonat written in Vue.js.
+#### This is the front-end of Bulkit written in Vue.js.
 
 ### Uses:
 - Vuexy template - [demo](https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/)
@@ -17,12 +17,12 @@
 
 - Clone the project
 ```
-> git clone https://github.com/Kristiyan96/abonat-front.git
+> git clone https://github.com/Kristiyan96/bulkit-front.git
 ```
 
 - Enter folder
 ```
-> cd abonat-front
+> cd bulkit-front
 ```
 
 - Install packages

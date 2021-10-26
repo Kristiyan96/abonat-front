@@ -22,7 +22,7 @@
           <b-avatar size="42" rounded variant="light-primary" class="mb-2">
             <feather-icon icon="MailIcon" size="18" />
           </b-avatar>
-          <h4>hello@abonat.com</h4>
+          <h4>hello@bulkit.app</h4>
           <span class="text-body">Best way to get answer faster!</span>
         </b-card>
       </b-col>
