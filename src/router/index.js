@@ -1,61 +1,77 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 // Routes
-import { canNavigate } from '@/libs/acl/routeProtection'
-import { isUserLoggedIn, getUserData, getHomeRouteForLoggedInUser } from '@/auth/utils'
-import apps from './routes/apps'
-import dashboard from './routes/dashboard'
-import pages from './routes/pages'
+import { canNavigate } from "@/libs/acl/routeProtection";
+import {
+  isUserLoggedIn,
+  getUserData,
+  getHomeRouteForLoggedInUser,
+} from "@/auth/utils";
+import apps from "./routes/apps";
+import dashboard from "./routes/dashboard";
+import pages from "./routes/pages";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   scrollBehavior() {
-    return { x: 0, y: 0 }
+    return { x: 0, y: 0 };
   },
   routes: [
-    { path: '/', redirect: { name: 'dashboard-ecommerce' } },
+    isUserLoggedIn()
+      ? { path: "/", redirect: { name: "dashboard-ecommerce" } }
+      : {
+          path: "/",
+          name: "pages-landing",
+          component: () => import("@/views/pages/landing/Landing.vue"),
+          meta: {
+            pageTitle: 'Welcome',
+            resource: 'Static',
+            layout: 'full'
+          },
+        },
     ...apps,
     ...dashboard,
     ...pages,
     {
-      path: '*',
-      redirect: 'error-404',
+      path: "*",
+      redirect: "error-404",
     },
   ],
-})
+});
 
 router.beforeEach((to, _, next) => {
-  const isLoggedIn = isUserLoggedIn()
+  const isLoggedIn = isUserLoggedIn();
 
   if (!canNavigate(to)) {
+    console.warn(to);
     // Redirect to login if not logged in
-    if (!isLoggedIn) return next({ name: 'auth-login' })
+    if (!isLoggedIn) return next({ name: "auth-login" });
 
     // If logged in => not authorized
-    return next({ name: 'misc-not-authorized' })
+    return next({ name: "misc-not-authorized" });
   }
 
   // Redirect if logged in
   if (to.meta.redirectIfLoggedIn && isLoggedIn) {
-    const userData = getUserData()
-    next(getHomeRouteForLoggedInUser(userData ? userData.role : null))
+    const userData = getUserData();
+    next(getHomeRouteForLoggedInUser(userData ? userData.role : null));
   }
 
-  return next()
-})
+  return next();
+});
 
 // ? For splash screen
 // Remove afterEach hook if you are not using splash screen
 router.afterEach(() => {
   // Remove initial loading
-  const appLoading = document.getElementById('loading-bg')
+  const appLoading = document.getElementById("loading-bg");
   if (appLoading) {
-    appLoading.style.display = 'none'
+    appLoading.style.display = "none";
   }
-})
+});
 
-export default router
+export default router;
